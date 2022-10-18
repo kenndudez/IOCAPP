@@ -1,0 +1,19 @@
+﻿
+{
+    "dbName": "IOCAPP",
+    "dbConfig": {
+        "server": "****",
+        "options": {
+            "trustServerCertificate": true,
+            "encrypt": false,
+            "enableArithAbort": true
+        },
+        "authentication": {
+            "type": "default",
+            "options": {
+                "userName": "**",
+                "password": "****"
+            }
+        }
+    }
+}

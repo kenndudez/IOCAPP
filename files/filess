@@ -1,0 +1,13 @@
+{
+    "dbName": "IOCAPP",
+    "dbConfig": {
+        "server": "WEMA-ITS-L9078\\SQLEXPRESS",
+        "options": {
+
+            "trustServerCertificate": true
+        },
+        "authentication": {
+            "type": "default"
+        }
+    }
+}
