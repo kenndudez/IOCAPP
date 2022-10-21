@@ -66,12 +66,6 @@ function sendEmail(userEmail, firstName){
     }
   });
  }
-
-
-
-
-
-
 User.read = function (result) {
   connection.query("SELECT * FROM users", (err, res) => {
     if (err) {
@@ -81,7 +75,6 @@ User.read = function (result) {
     }
   });
 };
-
 User.update = function (id, user, result) {
   connection.query("UPDATE users SET ? WHERE _id = ?", [user, id], function (
     err,
