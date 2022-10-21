@@ -39,11 +39,11 @@ User.create = function (user, result) {
       result(err, null);
     } else {
       result(null, "User successfully created!");
-      sendEmail(user.email);
+      sendEmail(user.email, user.firstName);
     }
   });
 };
-function sendEmail(userEmail){
+function sendEmail(userEmail, firstName){
 
   var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -56,7 +56,7 @@ function sendEmail(userEmail){
     from: 'kennydudez2@gmail.com',
     to: userEmail,
     subject: 'Successful Submission of Form',
-    text: 'Dear Pelumi,\nThank you for volunteering to serve at this years OIC.\n We are delighted and looking forward to having you give yourself to God as He grants you grace.\n We pray that the Lord keeps you steadfast in Jesus’ name,Amen!\n\nWith Love,OCPC Volunteer Coordinator,\n\nOIC 2022'
+    text: `Dear ${firstName},\nThank you for volunteering to serve at this years OIC.\n We are delighted and looking forward to having you give yourself to God as He grants you grace.\n We pray that the Lord keeps you steadfast in Jesus’ name,Amen!\n\nWith Love,OCPC Volunteer Coordinator,\n\nOIC 2022`
   };
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
