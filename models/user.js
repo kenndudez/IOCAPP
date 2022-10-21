@@ -1,24 +1,24 @@
 "user strict";
 
 const User = function (user) {
-  this.firstName = user.firstname,
-  this.lastName = user.lastname,
+  this.firstName = user.firstName,
+  this.lastName = user.lastName,
   this.email = user.email,
   this.gender = user.gender,
-  this.isMember = user.member,
+  this.isMember = user.isMember,
   this.yearJoinOasis = user.yearJoin,
-  this.isWorker = user.serve,
+  this.isWorker = user.isWorker,
   this.department = user.department,
-  this.phoneNumber = user.phone,
-  this.whatsappNumber = user.whatsapp,
-  this.ageRange = user.age,
-  this.hasMedicalCondition = user.accomodation,
-  this.isMedicalPractitioner = user.practitioner,
-  this.canLiftHeavyObject = user.liftobject,
-  this.isWorkOffWork = user.weekoffwork,
+  this.phoneNumber = user.phoneNumber,
+  this.whatsappNumber = user.whatsappNumber,
+  this.ageRange = user.ageRange,
+  this.hasMedicalCondition = user.hasMedicalCondition,
+  this.isMedicalPractitioner = user.isMedicalPractitioner,
+  this.canLiftHeavyObject = user.canLiftHeavyObject,
+  this.isWorkOffWork = user.isWorkOffWork,
   this.daysToBeAvailable = user.daysToBeAvailable,
-  this.preferredTeam = user.team,
-  this.mediaSkill = user.media
+  this.preferredTeam = user.preferredTeam,
+  this.mediaSkill = user.mediaSkill
  // this.createdAt = new Date();
  // this.updatedAt = new Date();
 };
