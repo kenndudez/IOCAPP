@@ -1,6 +1,6 @@
 "user strict";
 const connection = {
-  host: "******",
+  host: "********",
   user: "report",
   password: "report123",
   database: "oicdb",

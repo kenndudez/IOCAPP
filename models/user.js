@@ -1,5 +1,5 @@
 "user strict";
-
+var nodemailer = require('nodemailer');
 const User = function (user) {
   this.email = user.email;
   this.password= user.password; 
@@ -38,10 +38,39 @@ User.create = function (user, result) {
     if (err) {
       result(err, null);
     } else {
-      result(null, res.insertId);
+      result(null, "User successfully created!");
+      sendEmail(user.email);
     }
   });
 };
+function sendEmail(userEmail){
+
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'kennydudez2@@gmail.com',
+      pass: 'jubefxrpulwyglpt' 
+    }
+  });
+  var mailOptions = {
+    from: 'kennydudez2@gmail.com',
+    to: userEmail,
+    subject: 'Successful Submission of Form',
+    text: 'Dear Pelumi,\nThank you for volunteering to serve at this years OIC.\n We are delighted and looking forward to having you give yourself to God as He grants you grace.\n We pray that the Lord keeps you steadfast in Jesus’ name,Amen!\n\nWith Love,OCPC Volunteer Coordinator,\n\nOIC 2022'
+  };
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+ }
+
+
+
+
+
 
 User.read = function (result) {
   connection.query("SELECT * FROM users", (err, res) => {
