@@ -5,8 +5,8 @@ exports.createUser = async (req, res) => {
     return res.status(422).json({
       firstName: "firstname is required"+req.body.firstName,
       lastName: "lastname is required"+req.body.lastName,
-      email: "email is required".req.body.email,
-      gender: "gender is required".req.gender
+      email: "email is required"+req.body.email,
+      gender: "gender is required"+req.gender
     });
   }
   const user = new User(req.body);
