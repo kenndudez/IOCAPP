@@ -1,35 +1,25 @@
 "user strict";
 
 const User = function (user) {
-  this.email = user.email;
-  this.password= user.password; 
-  this.passwordHash= user.passwordHash; 
-  this.firstName = user.firstName; 
-  this.lastName = user.lastName; 
-  this.role = user.role; 
-  this.gender = user.gender; 
-  this.phoneNumber = user.phoneNumber; 
-  this.isSteward = user.isSteward; 
-    this.department = user.department; 
-    this.occupation = user.occupation; 
-    this.emergencyName = user.emergencyName; 
-    this.emergencyNumber = user.emergencyNumber; 
-    this.currentChurch= user.currentChurch;  
-    this.daysToBeAvailable = user.daysToBeAvailable; 
-    this.numberOfYearsInOasis = user.numberOfYearsInOasis; 
-    this.yearJoinOasis = user.yearJoinOasis; 
-    this.isDisability = user.isDisability;
-    this.reasonForService = user.isMedical;
-    this.isMedical = user.isMedical;
-    this.isHeavyLift = user.isHeavyLift;
-    this.isWorkOff = user.isWorkOff;
-    this.additionalComment = user.additionalComment;
-    this.whatsappNumber = user.whatsappNumber;
-    this.ageRange = user.ageRange;
-  this.firstName = user.firstName;
-  this.lastName = user.lastName;
-  this.email = user.email;
-  //this.createdAt = new Date();
+  this.firstName = user.firstname,
+  this.lastName = user.lastname,
+  this.email = user.email,
+  this.gender = user.gender,
+  this.isMember = user.member,
+  this.yearJoinOasis = user.yearJoin,
+  this.isWorker = user.serve,
+  this.department = user.department,
+  this.phoneNumber = user.phone,
+  this.whatsappNumber = user.whatsapp,
+  this.ageRange = user.age,
+  this.hasMedicalCondition = user.accomodation,
+  this.isMedicalPractitioner = user.practitioner,
+  this.canLiftHeavyObject = user.liftobject,
+  this.isWorkOffWork = user.weekoffwork,
+  this.daysToBeAvailable = user.days.filter((value) => value?.trim().length > 0).join(','),
+  this.preferredTeam = user.team,
+  this.mediaSkill = user.media
+ // this.createdAt = new Date();
  // this.updatedAt = new Date();
 };
 
