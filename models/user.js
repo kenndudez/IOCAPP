@@ -1,5 +1,5 @@
 "user strict";
-
+var nodemailer = require('nodemailer');
 const User = function (user) {
   this.firstName = user.firstName,
   this.lastName = user.lastName,
