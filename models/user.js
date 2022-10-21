@@ -16,7 +16,7 @@ const User = function (user) {
   this.isMedicalPractitioner = user.practitioner,
   this.canLiftHeavyObject = user.liftobject,
   this.isWorkOffWork = user.weekoffwork,
-  this.daysToBeAvailable = user.days.filter((value) => value?.trim().length > 0).join(','),
+  this.daysToBeAvailable = user.daysToBeAvailable,
   this.preferredTeam = user.team,
   this.mediaSkill = user.media
  // this.createdAt = new Date();
