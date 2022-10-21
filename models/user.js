@@ -48,12 +48,12 @@ function sendEmail(userEmail, firstName){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'kennydudez2@@gmail.com',
-      pass: 'jubefxrpulwyglpt' 
+      user: 'oasisoiconference@gmail.com',
+      pass: 'pfxcgbxtslnsqwax' 
     }
   });
   var mailOptions = {
-    from: 'kennydudez2@gmail.com',
+    from: 'oasisoiconference@gmail.com',
     to: userEmail,
     subject: 'Successful Submission of Form',
     text: `Dear ${firstName},\nThank you for volunteering to serve at this years OIC.\n We are delighted and looking forward to having you give yourself to God as He grants you grace.\n We pray that the Lord keeps you steadfast in Jesus’ name,Amen!\n\nWith Love,OCPC Volunteer Coordinator,\n\nOIC 2022`
