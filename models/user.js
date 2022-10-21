@@ -28,7 +28,7 @@ User.create = function (user, result) {
     if (err) {
       result(err, null);
     } else {
-      result(null, res.insertId);
+      result(null, "successful: "+res.insertId);
     }
   });
 };
