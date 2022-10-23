@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Subscriber = require("../models/subscriber");
+const AlterCall = require("../models/altercall");
 
 exports.createUser = async (req, res) => {
   if (!req.body.firstName || !req.body.lastName || !req.body.email) {
@@ -60,5 +61,20 @@ exports.createSubscribers = async (req, res) => {
       return res.status(403).send(err);
     }
     res.json(subscriber);
+  });
+};
+
+exports.createAlterCalls = async (req, res) => {
+  if (!req.body.email) {
+    return res.status(422).json({
+      email: "email is required" + req.body.email
+    });
+  }
+  const alterCall = new AlterCall(req.body);
+  AlterCall.create(alterCall, function (err, alterCall) {
+    if (err) {
+      return res.status(403).send(err);
+    }
+    res.json(alterCall);
   });
 };
