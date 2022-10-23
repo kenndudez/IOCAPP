@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Subscriber = require("../models/subscriber");
 
 exports.createUser = async (req, res) => {
   if (!req.body.firstName || !req.body.lastName || !req.body.email) {
@@ -44,5 +45,20 @@ exports.deleteUser = async (req, res) => {
       return res.status(403).send(err);
     }
     res.json(user);
+  });
+};
+
+exports.createSubscribers = async (req, res) => {
+  if (!req.body.email) {
+    return res.status(422).json({
+      email: "email is required" + req.body.email
+    });
+  }
+  const subscriber = new Subscriber(req.body);
+  Subscriber.create(subscriber, function (err, subscriber) {
+    if (err) {
+      return res.status(403).send(err);
+    }
+    res.json(subscriber);
   });
 };
