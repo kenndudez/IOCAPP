@@ -41,8 +41,8 @@ CREATE TABLE `altercalls` (
   `lastName` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `gender` varchar(50) NOT NULL,
-  `contactAddress` = varchar(500) NOT NULL, 
-  `prayerRequest` = varchar(500) NOT NULL, 
+  `contactAddress` varchar(500) NOT NULL, 
+  `prayerRequest` varchar(500) NOT NULL, 
   `createdDate` datetime DEFAULT now(),
   `updatedDate` datetime DEFAULT now()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -65,6 +65,12 @@ CREATE TABLE `subscribers` (
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
+ALTER TABLE `altercalls`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `subscribers`
+  ADD PRIMARY KEY (`id`);
+
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -72,6 +78,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+  ALTER TABLE `altercalls`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+   ALTER TABLE `subscribers`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
