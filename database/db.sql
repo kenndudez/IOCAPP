@@ -1,6 +1,8 @@
 DROP TABLE IF EXISTS `users`
 
 DROP TABLE IF EXISTS `subscribers`
+
+DROP TABLE IF EXISTS `altercalls`
 -- --------------------------------------------------------
 
 --
@@ -33,12 +35,28 @@ CREATE TABLE `users` (
   `updatedDate` datetime DEFAULT now()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `altercalls` (
+  `id` int UNSIGNED AUTO_INCREMENT NOT NULL,
+  `firstName` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `contactAddress` = varchar(500) NOT NULL, 
+  `prayerRequest` = varchar(500) NOT NULL, 
+  `createdDate` datetime DEFAULT now(),
+  `updatedDate` datetime DEFAULT now()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-  CREATE TABLE `subscribers` (
-`id` INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-`email` VARCHAR(50) NOT NULL
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
+-- Table structure for table `subscribers`
+--
+CREATE TABLE `subscribers` (
+`id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+`email` VARCHAR(50) NOT NULL
+`createdDate` datetime DEFAULT now(),
+`updatedDate` datetime DEFAULT now()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- Indexes for dumped tables
 --
 --
