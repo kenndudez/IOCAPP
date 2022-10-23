@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS `users`
 
 DROP TABLE IF EXISTS `subscribers`
 
-DROP TABLE IF EXISTS `altercalls`
+DROP TABLE IF EXISTS `altarcalls`
 -- --------------------------------------------------------
 
 --
@@ -35,8 +35,8 @@ CREATE TABLE `users` (
   `updatedDate` datetime DEFAULT now()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `altercalls` (
-  `id` int UNSIGNED AUTO_INCREMENT NOT NULL,
+CREATE TABLE `altarcalls` (
+  `id` INT UNSIGNED NOT NULL,
   `firstName` varchar(50) NOT NULL,
   `lastName` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `altercalls` (
 -- Table structure for table `subscribers`
 --
 CREATE TABLE `subscribers` (
-`id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+`id` INT UNSIGNED NOT NULL,
 `email` VARCHAR(50) NOT NULL
 `createdDate` datetime DEFAULT now(),
 `updatedDate` datetime DEFAULT now()
@@ -62,13 +62,13 @@ CREATE TABLE `subscribers` (
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
+altar TABLE `users`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `altercalls`
+altar TABLE `altarcalls`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `subscribers`
+altar TABLE `subscribers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -77,13 +77,13 @@ ALTER TABLE `subscribers`
 --
 -- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `users`
+altar TABLE `users`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
-  ALTER TABLE `altercalls`
+  altar TABLE `altarcalls`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
-   ALTER TABLE `subscribers`
+   altar TABLE `subscribers`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
