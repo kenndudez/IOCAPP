@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS `users`
+DROP TABLE IF EXISTS `users`;
 
-DROP TABLE IF EXISTS `subscribers`
+DROP TABLE IF EXISTS `subscribers`;
 
-DROP TABLE IF EXISTS `altarcalls`
+DROP TABLE IF EXISTS `altarcalls`;
 -- --------------------------------------------------------
 
 --
@@ -52,7 +52,7 @@ CREATE TABLE `altarcalls` (
 --
 CREATE TABLE `subscribers` (
 `id` INT UNSIGNED NOT NULL,
-`email` VARCHAR(50) NOT NULL
+`email` VARCHAR(50) NOT NULL,
 `createdDate` datetime DEFAULT now(),
 `updatedDate` datetime DEFAULT now()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
