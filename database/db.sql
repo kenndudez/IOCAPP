@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `subscribers`;
 
 DROP TABLE IF EXISTS `altarcalls`;
+
 -- --------------------------------------------------------
 
 --
@@ -69,6 +70,7 @@ alter TABLE `altarcalls`
   ADD PRIMARY KEY (`id`);
 
 alter TABLE `subscribers`
+
   ADD PRIMARY KEY (`id`);
 
 --
@@ -84,6 +86,7 @@ alter TABLE `users`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
    alter TABLE `subscribers`
+
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
