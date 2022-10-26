@@ -25,8 +25,6 @@ const User = function (user) {
   this.daysToBeAvailable = user.daysToBeAvailable,
   this.preferredTeam = user.preferredTeam,
   this.mediaSkill = user.mediaSkill
- // this.createdAt = new Date();
- // this.updatedAt = new Date();
 };
 
 User.create = function (user, result) {
@@ -89,7 +87,6 @@ function sendEmail(userEmail, firstName){
   transporter.use('compile', hbs({
     viewEngine: {
       extName: '.handlebars',
-      // partialsDir: viewPath,
       layoutsDir: viewPath,
       defaultLayout: false,
       partialsDir: partialsPath,
@@ -106,7 +103,6 @@ function sendEmail(userEmail, firstName){
     context: {            
       firstName : firstName       
       }
-    //text: `Dear ${firstName},\nThank you for volunteering to serve at this years OIC.\n We are delighted and looking forward to having you give yourself to God as He grants you grace.\n We pray that the Lord keeps you steadfast in Jesus’ name,Amen!\n\nWith Love,OCPC Volunteer Coordinator,\n\nOIC 2022`
   };
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {

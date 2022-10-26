@@ -62,13 +62,13 @@ CREATE TABLE `subscribers` (
 --
 -- Indexes for table `users`
 --
-altar TABLE `users`
+alter TABLE `users`
   ADD PRIMARY KEY (`id`);
 
-altar TABLE `altarcalls`
+alter TABLE `altarcalls`
   ADD PRIMARY KEY (`id`);
 
-altar TABLE `subscribers`
+alter TABLE `subscribers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -77,13 +77,13 @@ altar TABLE `subscribers`
 --
 -- AUTO_INCREMENT for table `users`
 --
-altar TABLE `users`
+alter TABLE `users`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
-  altar TABLE `altarcalls`
+  alter TABLE `altarcalls`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
-   altar TABLE `subscribers`
+   alter TABLE `subscribers`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
